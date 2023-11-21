@@ -1,0 +1,33 @@
+﻿@model List<Weltretter>
+
+@{
+    ViewData["Title"] = "Liste der Weltretter";
+}
+
+<h2>Liste der Weltretter</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Vorname</th>
+            <th>Nachname</th>
+            <th>Land</th>
+            <th>Email</th>
+            <th>Qualifikation</th>
+            <th>Volljährig</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var weltretter in Model)
+        {
+                <tr>
+                    <td>@weltretter.Vorname</td>
+                    <td>@weltretter.Nachname</td>
+                    <td>@weltretter.Land</td>
+                    <td>@weltretter.Email</td>
+                    <td>@weltretter.Qualifikation</td>
+                    <td>@(weltretter.Volljährig ? "Ja" : "Nein")</td>
+                </tr>
+        }
+    </tbody>
+</table>

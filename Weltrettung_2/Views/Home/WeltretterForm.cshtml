@@ -1,0 +1,19 @@
+﻿@model Weltretter
+
+@{
+    ViewData["Title"] = "Weltretter Formular";
+}
+
+<h2>Weltretter Formular</h2>
+
+<form asp-controller="Weltrettung" asp-action="WeltretterForm" method="post">
+    <!-- Form alanları -->
+    <input asp-for="Vorname" />
+    <input asp-for="Nachname" />
+    <input asp-for="Land" />
+    <input asp-for="Email" />
+    <input asp-for="Qualifikation" />
+    <input asp-for="Volljährig" type="checkbox" />
+
+    <button type="submit">Speichern</button>
+</form>
